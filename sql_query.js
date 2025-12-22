@@ -70,3 +70,17 @@ INSERT INTO bookings (vehicle_id, user_id, start_date, end_date, booking_status,
 (2, 1, '2024-12-28', '2025-01-02', 'pending', 20000.00),
 (3, 2, '2024-12-12', '2024-12-14', 'completed', 1600.00);
 
+
+
+// Query 1
+
+SELECT 
+  b.booking_id,
+  u.user_name,
+  v.vehicle_name,
+  b.start_date,
+  b.end_date,
+  b.booking_status
+FROM bookings b
+INNER JOIN users u ON b.user_id = u.user_id
+INNER JOIN vehicles v ON b.vehicle_id = v.vehicle_id;
