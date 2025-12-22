@@ -32,4 +32,41 @@ CREATE TABLE bookings(
 );
 
 
+INSERT INTO users (user_name, email, password, phone, role) VALUES
+('Rahim Ahmed', 'rahim@example.com', 'pass123', '01712345678', 'customer'),
+('Karim Hassan', 'karim@example.com', 'pass456', '01812345678', 'customer'),
+('Fatima Khan', 'fatima@example.com', 'pass789', '01912345678', 'customer'),
+('Admin User', 'admin@example.com', 'admin123', '01612345678', 'admin'),
+('Sadia Islam', 'sadia@example.com', 'pass321', '01512345678', 'customer'),
+('Mehedi Hasan', 'mehedi@example.com', 'pass654', '01412345678', 'customer'),
+('Nadia Rahman', 'nadia@example.com', 'pass987', '01312345678', 'customer'),
+('Shakib Ali', 'shakib@example.com', 'pass111', '01212345678', 'customer'),
+('Taslima Begum', 'taslima@example.com', 'pass222', '01112345678', 'customer'),
+('Habib Khan', 'habib@example.com', 'pass333', '01012345678', 'customer');
+
+
+INSERT INTO vehicles (vehicle_name, vehicle_type, model, registration_number, rental_price, availability_status) VALUES
+('Toyota Corolla', 'car', '2022', 'DHA-1234', 3500.00, 'available'),
+('Honda Civic', 'car', '2023', 'DHA-5678', 4000.00, 'rented'),
+('Yamaha R15', 'bike', 'V3', 'DHA-9101', 800.00, 'available'),
+('Suzuki Gixxer', 'bike', 'SF', 'DHA-1121', 700.00, 'available'),
+('Tata Truck', 'truck', 'LPT 2518', 'DHA-3141', 8000.00, 'maintenance'),
+('Mahindra Pickup', 'truck', 'Bolero', 'DHA-5161', 5000.00, 'available'),
+('BMW X5', 'car', '2024', 'DHA-7181', 10000.00, 'rented'),
+('Hero Splendor', 'bike', 'Plus', 'DHA-9202', 500.00, 'available'),
+('Nissan Patrol', 'car', '2021', 'DHA-1222', 6000.00, 'available'),
+('Royal Enfield', 'bike', 'Classic 350', 'DHA-3242', 1200.00, 'rented');
+
+
+INSERT INTO bookings (vehicle_id, user_id, start_date, end_date, booking_status, total_cost) VALUES
+(2, 1, '2024-12-15', '2024-12-20', 'completed', 20000.00),
+(7, 2, '2024-12-18', '2024-12-22', 'confirmed', 40000.00),
+(10, 3, '2024-12-20', '2024-12-25', 'confirmed', 6000.00),
+(1, 5, '2024-12-10', '2024-12-12', 'completed', 7000.00),
+(3, 6, '2024-12-22', '2024-12-24', 'pending', 1600.00),
+(4, 7, '2024-12-01', '2024-12-03', 'cancelled', 1400.00),
+(9, 8, '2024-12-25', '2024-12-30', 'pending', 30000.00),
+(1, 9, '2024-12-05', '2024-12-08', 'completed', 10500.00),
+(2, 1, '2024-12-28', '2025-01-02', 'pending', 20000.00),
+(3, 2, '2024-12-12', '2024-12-14', 'completed', 1600.00);
 
