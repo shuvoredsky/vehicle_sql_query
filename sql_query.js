@@ -95,3 +95,8 @@ WHERE NOT EXISTS (
   FROM bookings b
   WHERE b.vehicle_id = v.vehicle_id
 );
+
+
+// query 3
+SELECT * FROM vehicles v
+WHERE v.vehicle_type = 'car' AND v.availability_status = 'available';
