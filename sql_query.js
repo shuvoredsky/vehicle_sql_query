@@ -84,3 +84,14 @@ SELECT
 FROM bookings b
 INNER JOIN users u ON b.user_id = u.user_id
 INNER JOIN vehicles v ON b.vehicle_id = v.vehicle_id;
+
+
+// query 2
+
+SELECT * 
+FROM vehicles v
+WHERE NOT EXISTS (
+  SELECT 1 
+  FROM bookings b
+  WHERE b.vehicle_id = v.vehicle_id
+);
