@@ -100,3 +100,14 @@ WHERE NOT EXISTS (
 // query 3
 SELECT * FROM vehicles v
 WHERE v.vehicle_type = 'car' AND v.availability_status = 'available';
+
+
+// query 4
+
+SELECT 
+  v.vehicle_name,
+  COUNT(*) as total_bookings
+FROM bookings b
+JOIN vehicles v ON b.vehicle_id = v.vehicle_id
+GROUP BY v.vehicle_name
+HAVING COUNT(*) > 2;
